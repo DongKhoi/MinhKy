@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minh Kỳ Bae</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body style="background: #ffc5d1 !important">
+    <a
+      href="index.html"
+      class="back-button"
+      style="color: aliceblue; margin-left: 3%; margin-top: 5%"
+    >
+      <i class="fas fa-home"></i>
+    </a>
+    <div class="gif-letter">
+      <img src="letter.jpeg" alt="Hình ảnh tình yêu" class="love-image" />
+    </div>
+    <audio controls id="backgroundAudio" hidden>
+      <source src="Pround.mp3" type="audio/mpeg" />
+    </audio>
+    <div style="display: flex; justify-content: center; text-align: center;">
+        <button id="playButton">Nghe nhạc nè em</button>
+    </div>
+    <script>
+        var audio = document.getElementById("backgroundAudio");
+        var playButton = document.getElementById("playButton");
+
+        playButton.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = "Nhạc đang chạy nè em";
+            } else {
+                audio.pause();
+                playButton.textContent = "Nghe nhạc nè em";
+            }
+        });
+    </script>
+
+  </body>
+</html>
